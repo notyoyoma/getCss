@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>getCSS.js Demo</title>
+  <meta charset="utf-8" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="../getCss.js"></script>
+</head>
+<body>
+  <header>
+    <h1>getCss.js</h1>
+  </header>
+  <div class="wrap">
+    <h2>HTML / CSS</h2>
+    <div class="code">
+      <pre>
+  &lt;div id="example"&gt;
+    This is the example element
+  &lt;/div&gt;
+  &lt;style&gt;
+    #example { background: #aaa; box-shadow:2px 2px 2px #555; border-radius:20px; padding:30px; font-size:20px; }
+  &lt;/style&gt;
+      </pre>
+    </div>
+    <h3>display:</h3>
+    <div id="example">
+      This is the example element
+    </div>
+    <style>
+      #example { background: #aaa; box-shadow:2px 2px 2px #555; border-radius:20px; padding:30px; font-size:20px; }
+    </style>
+    <h2>JS</h2>
+    <pre>
+  $('#example').getCss();
+    </pre>
+    <h2>Result</h2>
+    <pre id="output">
+    </pre>
+    <script type="text/javascript">
+      function pretifyJson(str) {
+        return JSON.stringify(JSON.parse(str),null,5);
+      }
+      $('#output').append(pretifyJson(JSON.stringify( $('#example').getCss() )));
+    </script>
+  </div>
+</body>
+</html>

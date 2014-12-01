@@ -1,7 +1,19 @@
-;(function(){
+;(function($){
 	/* private variables */
-	var defaults = [ 'font-size' ];
-	var supported = defaults.slice(0);
+	var supported = ['font-family','font-size','font-weight','font-style','color',
+      'text-transform','text-decoration','letter-spacing','word-spacing',
+      'line-height','text-align','vertical-align','direction','background-color',
+      'background-image','background-repeat','background-position',
+      'background-attachment','opacity','width','height','top','right','bottom',
+      'left','margin-top','margin-right','margin-bottom','margin-left',
+      'padding-top','padding-right','padding-bottom','padding-left',
+      'border-top-width','border-right-width','border-bottom-width',
+      'border-left-width','border-top-color','border-right-color',
+      'border-bottom-color','border-left-color','border-top-style',
+      'border-right-style','border-bottom-style','border-left-style','position',
+      'display','visibility','z-index','overflow-x','overflow-y','white-space',
+      'clip','float','clear','cursor','list-style-image','list-style-position',
+      'list-style-type','marker-offset'];
 	
 	/* helper functions */
 	var arrayMerge = function(/* [array]... */) {
@@ -51,4 +63,4 @@
 		}
 	};
 	$.getCssSupport = css.set;
-});
+})(jQuery);
